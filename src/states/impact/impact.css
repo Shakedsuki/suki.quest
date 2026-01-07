@@ -1,0 +1,76 @@
+/* =========================================================
+   IMPACT STATE — MAX ENERGY
+   ========================================================= */
+
+body.state-impact {
+  background: var(--neon);
+}
+
+/* =========================================================
+   STATE ROOT
+   ========================================================= */
+
+#state-impact {
+    scroll-snap-align: start;
+  min-height: 100svh;
+  max-height: 100svh;
+
+  padding: clamp(1rem, 3vw, 2.5rem);
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+
+  background: var(--neon);
+  color: var(--ink);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   CENTERED STATEMENT
+   ========================================================= */
+
+.impact-center {
+  align-self: center;
+}
+
+.impact-statement {
+  margin: 0;
+
+  font-family: var(--font-system);
+  font-weight: 900;
+  text-transform: uppercase;
+
+  font-size: clamp(3rem, 9vw, 8.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.04em;
+
+  /* physical presence */
+  user-select: none;
+}
+
+/* =========================================================
+   META FOOTER
+   ========================================================= */
+
+.impact-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  opacity: 0.9;
+}
+
+/* =========================================================
+   STATE GUARDS
+   ========================================================= */
+
+body:not(.state-impact) #state-impact {
+  pointer-events: none;
+}

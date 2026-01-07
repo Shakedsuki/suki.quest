@@ -1,0 +1,61 @@
+/* =========================================================
+   NAVIGATION / CONTENT STATE
+   BIG · BOLD · BRUTAL
+   ========================================================= */
+
+.nav-state {
+  min-height: 100svh;
+  scroll-snap-align: start;
+
+  padding: clamp(2rem, 6vw, 6rem);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--neon);
+  color: var(--ink);
+}
+
+/* =========================================================
+   PRIMARY LABELS
+   ========================================================= */
+
+.nav-item {
+  margin: 0;
+
+  font-family: var(--font-system);
+  font-weight: 900;
+  text-transform: uppercase;
+
+  font-size: clamp(4rem, 12vw, 10rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   SECONDARY LINE (CONTROLLED, NOT SOFT)
+   ========================================================= */
+
+.nav-sub {
+  margin-top: 0.75rem;
+
+  font-family: var(--font-system);
+  font-weight: 700;
+
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  opacity: 0.85;
+}
+
+/* =========================================================
+   SEPARATION WITHOUT DECORATION
+   ========================================================= */
+
+.nav-state + .nav-state {
+  border-top: 2px solid var(--ink);
+}

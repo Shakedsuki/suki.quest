@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SUKI.DIR</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="/global.css">
+  <title>SUKI</title>
+  <meta name="description" content="Projects and mathematical artifacts." />
+
+  <!-- Core styles -->
+  <link rel="stylesheet" href="/src/core/styles/reset.css" />
+  <link rel="stylesheet" href="/src/core/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/core/styles/global.css" />
+
+  <!-- State styles -->
+  <link rel="stylesheet" href="/src/states/impact/impact.css" />
+  <link rel="stylesheet" href="/src/states/navigation/navigation.css" />
 </head>
 
-<body>
+<body class="state-impact">
 
-  <!-- AMBIENT 3D SPACE -->
-  <svg
-    class="ambient-space"
-    viewBox="0 0 1200 800"
-    preserveAspectRatio="xMidYMid slice"
-    aria-hidden="true"
-  >
-    <g id="grid"></g>
-  </svg>
+  <div id="stage">
 
-  <!-- CONTENT -->
-  <main class="landing">
+    <section id="state-impact">
+      <div class="impact-center">
+        <p class="impact-statement">
+          LET’S GO<br />
+          GAMBLING!
+        </p>
+      </div>
 
-    <h1 class="visually-hidden">SUKI Directory</h1>
+      <div class="impact-meta">
+        <span>© SUKI</span>
+        <span>Jerusalem</span>
+      </div>
+    </section>
 
-    <div class="brand">
-      <span class="name">SUKI</span>
-      <span class="brace" aria-hidden="true">{</span>
-    </div>
 
-    <nav class="sections" aria-label="Directories">
-      <a href="/law/">.LAW</a>
-      <a href="/dev/">.DEV</a>
-      <a href="/etc/">.ETC</a>
-    </nav>
 
-  </main>
+    <main id="content">
 
-  <script src="/ambient-space.js"></script>
+      <section class="nav-state" id="about">
+        <h2 class="nav-item">ABOUT</h2>
+        <p class="nav-sub">SUKI · systems · code · form</p>
+      </section>
 
+      <section class="nav-state" id="projects">
+        <h2 class="nav-item">PROJECTS</h2>
+        <p class="nav-sub">selected work · experiments · artifacts</p>
+      </section>
+
+      <section class="nav-state" id="contact">
+        <h2 class="nav-item">CONTACT</h2>
+        <p class="nav-sub">shaked@suki.quest</p>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script type="module" src="/src/core/app.js"></script>
 </body>
 </html>
