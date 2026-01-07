@@ -1,0 +1,108 @@
+/* ================= ROOT ================= */
+
+:root {
+  --bg: #f6f7f9;
+  --ink: #1a1d23;
+  --accent: #2b6cb0;
+}
+
+/* ================= RESET ================= */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ================= AMBIENT SPACE ================= */
+
+.ambient-space {
+  position: fixed;
+  inset: -20%;
+  width: 140vw;
+  height: 140vh;
+  z-index: -1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.ambient-space path {
+  fill: none;
+  stroke: rgba(0,0,0,0.113);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ================= CONTENT ================= */
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+}
+
+/* ================= BRAND ================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+.brace {
+  font-size: 12rem;
+  font-weight: 100;
+  margin-left: 0.9rem;
+  line-height: 1;
+  opacity: 0.8;
+  transform: translateY(-0.12em);
+}
+
+/* ================= DIRECTORY ================= */
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-left: -0.2rem;
+}
+
+.sections a {
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 1.45rem;
+  letter-spacing: 0.14em;
+  transition:
+    color 0.2s ease,
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sections a:hover {
+  color: var(--accent);
+  transform: translateX(6px);
+}

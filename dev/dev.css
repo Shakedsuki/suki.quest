@@ -1,0 +1,234 @@
+/* ===============================
+   GLOBAL
+   =============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  background: #0f0f0f;
+  color: #eaeaea;
+}
+
+/* ===============================
+   NAV
+   =============================== */
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+
+  font-size: 0.9rem;
+  color: #4ea1ff;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+
+.dev-header {
+  max-width: 1100px;
+  margin-bottom: 3rem;
+}
+
+.dev-header h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+.dev-header p {
+  margin: 0;
+  max-width: 520px;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+/* ===============================
+   GRID
+   =============================== */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 3rem;
+
+  max-width: 1400px;
+  margin-top: 4rem;
+}
+
+/* ===============================
+   PROJECT CARD (CANONICAL)
+   =============================== */
+
+.project-card {
+  background:transparent;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: #151515;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ===============================
+   VISUAL BOX
+   =============================== */
+
+.card-visual {
+  display: block;
+  aspect-ratio: 4 / 3;
+  background: #0f0f0f;
+  position: relative;
+}
+
+/* placeholder visual */
+.card-visual.placeholder {
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   INFO BOX
+   =============================== */
+
+.card-info {
+
+  padding: 1.6rem 1.6rem 1.4rem;
+  background: #ffffff;
+  color: black; /* calm link blue */
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-top: 1px solid rgba(0,0,0, 0.15);
+}
+
+.card-info h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.card-info .description {
+  margin: 0;
+  font-size: 0.9rem;
+    color: #444;
+   line-height: 1.5;
+}
+
+/* ===============================
+   ACTIONS
+   =============================== */
+
+.project-actions {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.action-primary,
+.action-secondary {
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.action-primary {
+  color: #4ea1ff;
+}
+
+.action-secondary {
+  color: #4ea1ff;
+}
+
+.action-primary:hover,
+.action-secondary:hover {
+  text-decoration: underline;
+}
+
+.action-disabled {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* ===============================
+   FOOTER META
+   =============================== */
+
+.last-updated {
+  margin-top: auto;
+  padding-top: 1rem;
+
+  text-align: center;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+/* ===============================
+   PROSTIR VISUAL (CONTENT ONLY)
+   =============================== */
+
+.prostir-canvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.prostir-logo {
+  position: relative;
+  z-index: 3;
+  max-width: 70%;
+  margin: 2.2rem auto 0;
+  display: block;
+}
+
+.prostir-slash {
+  position: absolute;
+  inset: auto -20% 22% -20%;
+  height: 22px;
+  background: #ff4b78;
+  transform: rotate(-9deg);
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.prostir-wave {
+  position: absolute;
+  bottom: -18%;
+  left: -10%;
+  width: 120%;
+  height: 60%;
+  border: 22px solid #7e68d1;
+  border-top: none;
+  border-radius: 0 0 60% 60%;
+  z-index: 2;
+}
