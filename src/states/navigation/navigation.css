@@ -86,60 +86,7 @@
   height: 100%;
 }
 
-/* =========================================================
-   RIGHTWARD ARROW (DIRECTIONAL, NOT CTA)
-   ========================================================= */
 
-/* =========================================================
-   PROJECTS — DIRECTIONAL ARROW (BLUNT)
-   ========================================================= */
-
-/* =========================================================
-   PROJECTS — BLOCK ARROW (GEOMETRIC)
-   ========================================================= */
-
-.projects-arrow {
-  position: absolute;
-  right: clamp(2rem, 4vw, 5rem);
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: clamp(10rem, 18vw, 18rem);
-  height: clamp(4rem, 7vw, 6rem);
-
-  display: flex;
-  align-items: center;
-
-  opacity: 0.18;
-  pointer-events: none;
-}
-
-/* shaft */
-.projects-arrow .shaft {
-  flex: 1;
-  height: 100%;
-  background: var(--ink-on-projects);
-}
-
-/* head */
-.projects-arrow .head {
-  width: 0;
-  height: 0;
-
-  border-top: calc(clamp(4rem, 7vw, 6rem) / 2) solid transparent;
-  border-bottom: calc(clamp(4rem, 7vw, 6rem) / 2) solid transparent;
-  border-left: calc(clamp(4rem, 7vw, 6rem) * 0.8) solid var(--ink-on-projects);
-}
-
-/* subtle intent */
-#projects:hover .projects-arrow {
-  opacity: 0.28;
-}
-
-.nav-projects-select {
-  background: #000;
-  color: #fff;
-}
 
 .projects-select-field {
   width: 100%;
