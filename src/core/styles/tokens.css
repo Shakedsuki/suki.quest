@@ -1,0 +1,22 @@
+:root {
+  /* SURFACES */
+  --field: #d7ff00;        /* Landing */
+  --neutral: #ECEDE3;    /* About */
+  --projects: #FF2A2A;  /* Projects (magenta-red) */
+  --control: #0e0f0f;      /* Don’t Call */
+
+  /* INK */
+  --ink-on-field: #0e0f0f;
+  --ink-on-neutral: #0E0E0E;
+  --ink-on-projects:  #000000;
+  --control: #0b0d0f;            /* deep terminal black */
+  --ink-on-control-main: #e6e6e6; /* main terminal text */
+  --ink-on-control-sub: #9aa0a6;  /* muted prompt text */
+
+  /* Evangelion accent */
+  --terminal-accent: #a855f7; /* violet / magenta */
+
+  /* RULES */
+  --rule-dark: rgba(0, 0, 0, 0.18);
+  --rule-light: rgba(255, 255, 255, 0.25);
+}

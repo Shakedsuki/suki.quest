@@ -21,8 +21,8 @@ body.state-impact {
   grid-template-rows: 1fr auto;
   align-items: center;
 
-  background: var(--neon);
-  color: var(--ink);
+  background: var(--field);
+  color: var(--ink-on-field);
 
   overflow: hidden;
 }
@@ -73,4 +73,9 @@ body.state-impact {
 
 body:not(.state-impact) #state-impact {
   pointer-events: none;
+}
+
+#state-impact {
+  background: var(--field);
+  color: var(--ink-on-field);
 }

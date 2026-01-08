@@ -12,9 +12,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background: var(--neon);
-  color: var(--ink);
 }
 
 /* =========================================================
@@ -31,12 +28,10 @@
   font-size: clamp(4rem, 12vw, 10rem);
   line-height: 0.9;
   letter-spacing: -0.04em;
-
-  cursor: pointer;
 }
 
 /* =========================================================
-   SECONDARY LINE (CONTROLLED, NOT SOFT)
+   SECONDARY LINE
    ========================================================= */
 
 .nav-sub {
@@ -53,9 +48,226 @@
 }
 
 /* =========================================================
-   SEPARATION WITHOUT DECORATION
+   ABOUT — identity / clarity
    ========================================================= */
 
-.nav-state + .nav-state {
-  border-top: 2px solid var(--ink);
+#about {
+  background: var(--neutral);
+  color: var(--ink-on-neutral);
+}
+
+#state-impact + #about {
+  border-top: 2px solid var(--rule-dark);
+}
+
+/* =========================================================
+   PROJECTS — output / energy
+   ========================================================= */
+
+#projects {
+  background: var(--projects);
+  color: var(--ink-on-projects);
+}
+
+#projects .nav-sub {
+  opacity: 0.75;
+}
+
+#about + #projects {
+  border-top: 2px solid var(--rule-dark);
+}
+
+/* =========================================================
+   PROJECTS FIELD
+   ========================================================= */
+
+.projects-field {
+  position: relative;
+  height: 100%;
+}
+
+/* =========================================================
+   RIGHTWARD ARROW (DIRECTIONAL, NOT CTA)
+   ========================================================= */
+
+/* =========================================================
+   PROJECTS — DIRECTIONAL ARROW (BLUNT)
+   ========================================================= */
+
+/* =========================================================
+   PROJECTS — BLOCK ARROW (GEOMETRIC)
+   ========================================================= */
+
+.projects-arrow {
+  position: absolute;
+  right: clamp(2rem, 4vw, 5rem);
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: clamp(10rem, 18vw, 18rem);
+  height: clamp(4rem, 7vw, 6rem);
+
+  display: flex;
+  align-items: center;
+
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* shaft */
+.projects-arrow .shaft {
+  flex: 1;
+  height: 100%;
+  background: var(--ink-on-projects);
+}
+
+/* head */
+.projects-arrow .head {
+  width: 0;
+  height: 0;
+
+  border-top: calc(clamp(4rem, 7vw, 6rem) / 2) solid transparent;
+  border-bottom: calc(clamp(4rem, 7vw, 6rem) / 2) solid transparent;
+  border-left: calc(clamp(4rem, 7vw, 6rem) * 0.8) solid var(--ink-on-projects);
+}
+
+/* subtle intent */
+#projects:hover .projects-arrow {
+  opacity: 0.28;
+}
+
+.nav-projects-select {
+  background: #000;
+  color: #fff;
+}
+
+.projects-select-field {
+  width: 100%;
+  display: grid;
+  gap: clamp(3rem, 8vw, 6rem);
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+
+  display: block;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 2rem;
+
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.project-link:last-child {
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  padding-bottom: 2rem;
+}
+
+.project-title {
+  display: block;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+.project-sub {
+  margin-top: 0.5rem;
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.project-link:hover {
+  transform: translateX(10px);
+  opacity: 0.85;
+}
+
+
+
+/* =========================================================
+   CONTACT — TERMINAL END STATE
+   ========================================================= */
+
+#contact {
+    background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(255,255,255,0.04),
+      transparent 60%
+    ),
+    var(--control);
+  color: var(--ink-on-control-main);
+}
+
+#contact .terminal {
+  max-width: 48rem;
+}
+
+/* headline */
+#contact .terminal-title {
+  letter-spacing: -0.015em;
+  margin-bottom: 2rem;
+}
+
+/* terminal text */
+#contact .terminal-line {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-control-sub);
+  margin: 0 0 0.5rem 0;
+}
+
+/* email — command result */
+#contact .terminal-email {
+  font-family: var(--font-mono, monospace);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-control-main);
+  margin: 0 0 2rem 0;
+}
+
+/* cursor */
+#contact .terminal-cursor {
+  font-family: var(--font-mono, monospace);
+  font-size: 1rem;
+  color: var(--project-accent); /* Evangelion purple/red */
+}
+
+/* top boundary */
+#projects + #contact {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+#contact .nav-item {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+#contact .nav-sub {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+}
+
+#contact .nav-sub::before {
+  content: "> ";
+  opacity: 0.6;
+}
+
+#contact .terminal-cursor {
+  display: inline-block;
+  margin-top: 1.5rem;
+  animation: blink 2s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  40%  { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
 }
